@@ -21,7 +21,7 @@ form.addEventListener('submit' && 'click', (e)=>{
 })
 
 async function getCurrent(city){
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=79de3fcf31834cbd83e220633241104&q=${city}&aqi=no`)
+    let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=79de3fcf31834cbd83e220633241104&q=${city}&aqi=no`)
     let data = await response.json()
     console.log(data)
     if(data.error){
@@ -39,7 +39,7 @@ async function getCurrent(city){
 }
 
 async function getForecast(city){
-    let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=79de3fcf31834cbd83e220633241104&q=${city}&days=1&aqi=no&alerts=no`)
+    let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=79de3fcf31834cbd83e220633241104&q=${city}&days=1&aqi=no&alerts=no`)
     let data = await response.json()
     console.log(data)
     if(data.error){
